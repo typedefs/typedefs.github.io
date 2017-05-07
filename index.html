@@ -1,0 +1,51 @@
+<html>
+<body>
+
+
+<h1>Typedefs<h1>
+
+<p>
+Language agnostic definition of types and type constructors.
+</p>
+
+<p>
+Minimal "type system", modelled after polynomial functors and W-types
+</p>
+
+<p>
+Used by <a href="http://statebox.org">statebox</a>
+</p>
+
+<p>
+See <a href="https://github.com/typedefs">github/typedefs</a>
+</p>
+
+<h4>example</h4>
+
+<pre>
+type foo : *;
+type Ints = array i32;
+
+type Units : *;
+type Units = array product { };
+
+type List : * -> *;
+type List = array;
+
+type Zero : *;
+type Zero = sum { };
+
+type One : *;
+type One = product { };
+
+type Maybe : *;
+type Maybe = sum { just: i32, nothing: One };
+
+/* comment */
+
+type EmptyArray = array sum { };
+</pre>
+
+
+</body>
+</html>
