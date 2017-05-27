@@ -1,51 +1,62 @@
 <html>
+</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Statebox, everything is wires!">
+  <title>Typedefs</title>
+  <link rel="stylesheet" href="css/pure-min.css">
+  <link rel="stylesheet" href="css/grids-responsive-min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
 
+<div id="jumbo-wrapper" style="text-align: center">
+    <div id="jumbo" style="display: inline-block;">
+      <span id="jumbo-type">type</span><span
+            id="jumbo-defs">defs</span>
+    </div>
+</div>
 
-<h1>Typedefs<h1>
-
-<p>
-Language agnostic definition of types and type constructors.
-</p>
-
-<p>
-Minimal "type system", modelled after polynomial functors and W-types
-</p>
-
-<p>
-Used by <a href="http://statebox.org">statebox</a>
-</p>
-
-<p>
-See <a href="https://github.com/typedefs">github/typedefs</a>
-</p>
-
-<h4>example</h4>
+<div id="bodytext">
 
 <pre>
-type foo : *;
-type Ints = array i32;
-
-type Units : *;
-type Units = array product { };
-
-type List : * -> *;
-type List = array;
-
-type Zero : *;
-type Zero = sum { };
-
-type One : *;
-type One = product { };
-
-type Maybe : *;
-type Maybe = sum { just: i32, nothing: One };
-
-/* comment */
-
-type EmptyArray = array sum { };
+<a href="https://github.com/typedefs">https://github.com/typedefs</a>
 </pre>
 
+<h1>WHAT</h1>
+<pre wrap>
+Programming language agnostic type construction language based on polynomials.
+</pre>
+
+<h1>WHY</h1>
+<pre wrap>
+We need a mathematically clean but useful type specification language.
+</pre>
+
+<h1>HOW</h1>
+<pre wrap>
+Polynomials
+
+- <b>0</b> void or the empty type
+- <b>1</b> the unit type
+- <b>+</b> co-products of types
+- <b>*</b> products of types
+
+Kleene star
+
+- <b>⋆</b> (A⋆):type ↦ (Σ n:nat. A):type
+</pre>
+
+<h1>REFERENCES</h1>
+<pre>
+- [2010] <em>Nicola Gambino, Joachim Kock</em>
+  <b>Polynomial Functors and Polynomial Monads</b>
+  <a href="literature/polynomials.pdf">polynomials.pdf</a>
+</pre>
+
+</div>
+
+<div id="backdrop"></div>
 
 </body>
 </html>

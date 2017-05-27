@@ -1,0 +1,106 @@
+body {
+    color: #f08;
+    background-color:azure;
+    padding: 1em;
+}
+
+#backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 500px;
+  background-image: url(../images/bgd.png);
+  padding: 0;
+  z-index: -1;
+}
+
+#bodytext {
+  width: 60%;
+  margin: 0 auto;
+  padding: 4em;
+  background-color: rgba(10, 10, 10, 0.9);/*rgba(240,256,256);*/
+}
+
+body, h1, #jumbo {
+  font-family: 'Input Mono';
+}
+
+body {
+  font-size: 16pt;
+}
+
+h1 {
+  font-size: 18pt;
+}
+
+#jumbo {
+    padding: 40pt 20pt;
+    font-size: 64pt;
+}
+
+/*Conor Colors*/
+#jumbo-type {
+    color: #42f;
+}
+
+#jumbo-defs {
+    color: #333;
+    font-weight: bold;
+    text-decoration: underline;
+    /*color: #f24;*/
+}
+
+h1 {
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: blue;
+}
+
+pre {
+  color: #999;
+}
+
+/*
+
+  
+  .backdrop {
+    display:none;
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 400%;
+    height: 400%;
+    background-size: 196px;
+    background-image: url(background.png);
+    transform: rotate(24deg) translate(-10em, -10em);
+    opacity: 0.2;
+    padding: 0;
+  }
+
+  .main {
+    padding: 2em;
+  }
+  
+
+  .jumbo {
+    font-size: 96pt;
+    font-family: monospace;
+    border: 1px solid red;
+  }
+  .pill {
+    background: gray;
+  }
+
+  .align {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+
+  */
