@@ -12,42 +12,56 @@
 
 <div id="jumbo-wrapper" style="text-align: center">
     <div id="jumbo" style="display: inline-block;">
-      <span id="jumbo-type">type</span><span
+      <span id="jumbo-type">&#964;ype</span><span
             id="jumbo-defs">defs</span>
     </div>
 </div>
 
 <div id="bodytext">
 
+<h1>What</h1>
+<p>
+  A programming language agnostic type construction and interchange language solidly grounded in mathematics. With Typedefs, you can:
+
+  <ul>
+    <li>Define types;</li>
+    <li>Define terms (values) of those type;</li>
+    <li>Serialize and deserialize such types and terms.</li>
+  </ul>
+
+  These can then be interchanged between heterogeneous systems.
+</p>
+
+<h1>Why</h1>
+
+<p>
+    We need a mathematically clean but useful type specification
+    language without ad hoc features, edge cases and artificial limitations.
+</p>
+
+<h1>How</h1>
+
+<p>
+  Typedefs allows you to define ADTs (Algebraic Data Types) in terms of least
+  fixpoints of <em>F</em>-algebras, where the <em>F</em>'s are polynomial functors:
+</p>
+
+<ul>
+  <li><code>0</code> void or the empty type</li>
+  <li><code>1</code> the unit type</li>
+  <li><code>+</code> co-products of types</li>
+  <li><code>×</code> products of types</li>
+  <li><code>&mu;</code> fixpoint operator</li>
+</ul>
+
+<h1>Project</h1>
+<p>
 <pre>
 <a href="https://github.com/typedefs">https://github.com/typedefs</a>
 </pre>
+</p>
 
-<h1>WHAT</h1>
-<pre wrap>
-Programming language agnostic type construction language based on polynomials.
-</pre>
-
-<h1>WHY</h1>
-<pre wrap>
-We need a mathematically clean but useful type specification language.
-</pre>
-
-<h1>HOW</h1>
-<pre wrap>
-Polynomials
-
-- <b>0</b> void or the empty type
-- <b>1</b> the unit type
-- <b>+</b> co-products of types
-- <b>×</b> products of types
-
-Kleene star
-
-- <b>⋆</b> (A⋆):type ↦ (Σ n:nat. A[n]):type
-</pre>
-
-<h1>REFERENCES</h1>
+<h1>References</h1>
 <pre>
 - [2010] <em>Nicola Gambino, Joachim Kock</em>
   <b>Polynomial Functors and Polynomial Monads</b>
