@@ -15,7 +15,7 @@ It is written in the [Idris](https://www.idris-lang.org/) programming language.
 
 ## Why?
 
-Existing tools ([protobuf](https://developers.google.com/protocol-buffers/), [thrift](https://thrift.apache.org)) lack algebraic structure and as such cause a lot of incidental complexity, especially when used in more principled settings such as *proof assistants* or *purely functional programming languages*.
+Existing tools ([protobuf](https://developers.google.com/protocol-buffers/), [thrift](https://thrift.apache.org)) lack algebraic structure and as such cause a lot of needless complexity, especially when used in more principled settings such as *proof assistants* or *purely functional programming languages*.
 
 ## When?
 
