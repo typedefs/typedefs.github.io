@@ -15,9 +15,6 @@ There is much prior and ongoing work that is related, here we collect references
 6. Initial Algebra Semantics is Enough! — *Patricia Johann and Neil Ghani* [[2007](https://personal.cis.strath.ac.uk/neil.ghani/papers/ghani-tlca07.pdf)]
 7. Polynomial Functors and Polynomial Monads — *Nicola Gambino, Joachim Kock* [[2010](https://arxiv.org/abs/0906.4931)]
 
-
-
-
 ###  Related Stuffs
 
 - [wikipedia:](https://en.wikipedia.org/wiki/Interface_description_language) Interface Description Language

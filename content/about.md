@@ -7,7 +7,7 @@ title: Typedefs — Background & Motivation
 
 Typedefs is similar to [protocol-buffers](https://developers.google.com/protocol-buffers/), [thrift](https://thrift.apache.org/) and [many more](/related).
 
-However, it is based on an elementary mathematical theory of datatypes and aims to be a more natural fit for users of **proof assistants** and **purely functional, strongly typed** programming languages.
+However, it is based on a theory of algebraic datatypes and aims to be a more natural fit for users of **proof assistants** and **purely functional, strongly typed** programming languages.
 
 ## Background and motivation
 

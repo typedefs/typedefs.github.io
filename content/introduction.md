@@ -136,6 +136,8 @@ Here is the definiton.
 (name Maybe (+ 1 (var 0)))
 ```
 
+The number in `(var 0)` is a [De Bruijn indices](https://en.wikipedia.org/wiki/De_Bruijn_index).
+
 ## **TODO**
 
 That's it for now, more to be written.
