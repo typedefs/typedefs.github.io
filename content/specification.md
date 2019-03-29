@@ -7,7 +7,7 @@ title: Typedefs — Binary Format
 
 We will collect various specification details here, at the moment this is rather incomplete.
 
-The typedef language `TDef` can be found in [`Typedefs.idr`](https://github.com/typedefs/typedefs/blob/master/src/Typedefs.idr#L14).
+The typedef language `TDef` can be found in [Typedefs.idr](https://github.com/typedefs/typedefs/blob/master/src/Typedefs.idr#L14).
 
 - `T0` **0** the empty type
 - `T1` **1** the unit type
@@ -16,6 +16,10 @@ The typedef language `TDef` can be found in [`Typedefs.idr`](https://github.com/
 - `TMu` **µ** fixpoint operator (also known as recursion)
 - `TVar` **a**, **b**, ... variables
 - `TApp` **(a b)** application
+
+For example expressions in Idris, see [Examples.idr](https://github.com/typedefs/typedefs/blob/master/examples/Examples.idr#L10).
+
+For details on our S-expression (LISP syntax) based frontend, see [Test/Parse.idr](https://github.com/typedefs/typedefs/blob/master/src/Test/Parse.idr#L25).
 
 ## Binary term serialization format.
 

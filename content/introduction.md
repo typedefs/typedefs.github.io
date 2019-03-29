@@ -3,8 +3,6 @@ layout: base.njk
 title: Typedefs — Introduction
 ---
 
-**TODO** This intro is incomplete...
-
 # Introduction
 
 See [about](/about) for some background and motivation.
@@ -138,7 +136,7 @@ Here is the definiton.
 (name Maybe (+ 1 (var 0)))
 ```
 
-## TODO
+## **TODO**
 
 That's it for now, more to be written.
 

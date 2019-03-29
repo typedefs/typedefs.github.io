@@ -9,9 +9,7 @@ This project is developed by the [Statebox](https://statebox.org) team.
 
 ## What?
 
-Typedefs is a programming language agnostic, algebraic datatype definition language.
-
-It is written in the [Idris](https://www.idris-lang.org/) programming language.
+Typedefs is a programming language agnostic, algebraic datatype definition language, written in [Idris](https://www.idris-lang.org/).
 
 Current backends are Haskell, ReasonML and JSON Schema, see [targets](/targets) for details.
 
@@ -24,7 +22,7 @@ You can try typedefs in our browser!<br>
 
 Existing tools ([protobuf](https://developers.google.com/protocol-buffers/), [thrift](https://thrift.apache.org)) lack algebraic structure and may cause friction when used in more principled settings such as *proof assistants* or *purely functional programming languages*.
 
-A more detailed answer can be found on the [about](/about) page.
+An overview and motivation can be found on the [about](/about) page.
 
 ## When?
 
