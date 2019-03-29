@@ -17,6 +17,25 @@ module.exports = function(eleventyConfig) {
         "md","css"
     ]
 
+    // differ markdown processor
+    let markdownIt = require("markdown-it")
+    let options = {
+        html: true,
+        breaks: true,
+        linkify: true,
+        typographer: true
+    }
+    let md = markdownIt(options)
+
+    // add KaTeX support
+    let mk = require('markdown-it-katex')
+    md.use(mk);
+
+    // add `[x]` and `[ ]` checkmark support
+    md.use(require('markdown-it-checkbox'))
+
+    eleventyConfig.setLibrary("md", md);
+
     eleventyConfig.passthroughFileCopy = true
 
     eleventyConfig.dir = {
