@@ -1,0 +1,25 @@
+{
+  "name": "typedefs-com-site.git",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typedefs/typedefs.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/typedefs/typedefs.github.io/issues"
+  },
+  "homepage": "https://github.com/typedefs/typedefs.github.io#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.7.1",
+    "html-minifier": "^3.5.21"
+  }
+}

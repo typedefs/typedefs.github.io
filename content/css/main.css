@@ -1,0 +1,43 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 150%;
+    padding: 2em;
+    background-color: beige;
+}
+
+a {
+    color: blue;
+}
+
+#bodytext {
+    max-width: 760px;
+    margin: auto;
+}
+
+code {
+    font-size: 125%;
+    color: darkviolet;
+    padding: 0px 4px;
+}
+
+
+/** this follows the Conor McBride color scheme **/
+
+#jumbo {
+    margin-bottom: 1em;
+    font-family: monospace;
+    font-size: 32pt;
+}
+
+#jumbo a {
+    text-decoration: none;
+}
+
+#jumbo-type {
+    color: blue;
+}
+
+#jumbo-defs {
+    color: black;
+    text-decoration: underline;
+}

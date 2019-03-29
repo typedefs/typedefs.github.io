@@ -1,0 +1,27 @@
+<html>
+</head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div id="main">
+
+<div id="jumbo">
+  <a href="/"><span id="jumbo-type">type</span><span id="jumbo-defs">defs</span></a>
+</div>
+
+<div id="bodytext">
+    {% block container %}
+    <div class="content markdown-body">
+    {{ content | safe }}
+    </div>
+    {% endblock %}
+</div>
+
+</div>
+
+</body>
+</html>
