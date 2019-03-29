@@ -9,11 +9,13 @@ This project is developed by the [Statebox](https://statebox.org) team.
 
 ## What?
 
-Typedefs is a *formally verified*, programming language agnostic, algebraic datatype definition language.
+Typedefs is a programming language agnostic, algebraic datatype definition language.
+
+It is written in the [Idris](https://www.idris-lang.org/) programming language.
 
 ## Why?
 
-Existing tools lack algebraic structure and as such cause a lot of incidental complexity, especially when used in more principled settings such as *proof assistants* or *purely functional programming languages*.
+Existing tools ([protobuf](https://developers.google.com/protocol-buffers/), [thrift](https://thrift.apache.org)) lack algebraic structure and as such cause a lot of incidental complexity, especially when used in more principled settings such as *proof assistants* or *purely functional programming languages*.
 
 ## When?
 
@@ -25,6 +27,5 @@ Follow [`@statebox`](https://twitter.com/statebox) on twitter to stay up to date
 
 ## Where?
 
-[Try typedefs in the browser](https://try-typedefs.netlify.com).
-
+[Try typedefs in the browser](https://try.typedefs.com).
 [Check out our code](https://github.com/typedefs).
