@@ -34,7 +34,7 @@ See the last part of the [introduction](/introduction).
 
 ## Code generation
 
-Another way to work with type definitions is to generate code in a target language that describes the types and can serialize and deserialize it's terms.
+Another way to work with type definitions is to generate code in a target language that describes the types and can serialize and deserialize its terms.
 
 Code generation can be seen in action in your browser, surf to [try.typedefs.com](https://try.typedefs.com).
 
