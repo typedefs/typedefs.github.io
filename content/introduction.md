@@ -31,7 +31,7 @@ With this you define *algebraic datatypes* (ADTs) such as:
 
 ### The units
 
-The theory has two ground terms, from which all concrete type are assembled.
+The theory has two ground terms, from which all concrete types are assembled.
 
 - `0` the empty type
 - `1` the unit type
@@ -129,7 +129,7 @@ Hence, it is a 1-ary function from typedefs to typedefs.
 
 **α → 1 + α**
 
-Here is the definiton.
+Here is the definiton:
 
 ```clojure
 ;; the α → Maybe α type constructor
