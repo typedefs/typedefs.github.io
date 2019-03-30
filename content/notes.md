@@ -6,6 +6,12 @@ title: Typedefs — Some notes
 
 # Some notes
 
+*TDB*
+
+<!--
+
+TODO: convert these notes into proper docs
+
 **warning**: you probably don't want to read this. These notes a very rough and partially outdated, mainly for internal use, to be converted into proper documentation eventually.
 
 ## Typedefs FAQ
@@ -204,3 +210,6 @@ And turn them into a binary file, the serialization of the type definitions.
 Then you can take that and turn it into a helper library for a particular target language or system.
 
     tdefs compile types.tdb -T purescript -o src/Typedefs/Data
+
+
+-->
