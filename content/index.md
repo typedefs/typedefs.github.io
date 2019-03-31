@@ -14,7 +14,7 @@ Typedefs is a programming language agnostic, algebraic datatype definition langu
 Current backends are Haskell, ReasonML and JSON Schema, see [targets](/targets) for details.
 
 <span id ="try">
-You can try typedefs in our browser!<br>
+You can try typedefs in your browser!<br>
 <code><a href="https://try.typedefs.com">try.typedefs.com</a></code>
 </span>
 
@@ -26,7 +26,7 @@ An overview and motivation can be found on the [about](/about) page.
 
 ## When?
 
-This project is close to being usable, we are working hard on documentation, tooling and target language support.
+This project is close to being usable. We are working hard on documentation, tooling and target language support.
 
 In the long term, we envision a content addressable repository of types, usable in all programming languages and beyond.
 
