@@ -26,7 +26,7 @@ An overview and motivation can be found on the [about](/about) page.
 
 ## When?
 
-This project is close to being usable, we are working hard on documentation, tooling and target language support.
+This project is close to being usable. We are working hard on documentation, tooling and target language support.
 
 In the long term, we envision a content addressable repository of types, usable in all programming languages and beyond.
 
