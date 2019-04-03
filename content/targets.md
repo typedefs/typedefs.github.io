@@ -18,24 +18,24 @@ Languages & systems we might want to support or have already implemented:
 - [x] ReasonML, see [`ReasonML.idr`](https://github.com/typedefs/typedefs/blob/master/src/Backend/ReasonML.idr)
 - [ ] OCaml
 - [ ] F#
-- [x] JSON (Schema), see [`JSON.idr`](https://github.com/typedefs/typedefs/blob/master/src/Backend/JSON.idr)
-- [ ] JS
+- [x] JSON Schema, see [`JSON.idr`](https://github.com/typedefs/typedefs/blob/master/src/Backend/JSON.idr)
+- [ ] JavaScript
 - [ ] ndjson
 - [ ] SQL
-- [ ] CQL (formerly AQL)
+- [ ] [CQL](http://catinf.com/) (Categorical Query Language, formerly AQL)
 - [ ] Scala
 - [ ] Swift
 - [ ] Clojure
 - [ ] other LISPs
 - [ ] Racket
 - [ ] Typescript
-- [ ] Flow
+- [ ] [Flow](https://flow.org/)
 - [ ] Python
 - [ ] Julia
 - [ ] PHP
 - [ ] Perl
-- [ ] JAVA
+- [ ] Java
 - [ ] C#
-- [ ] XML (Schema)
+- [ ] XML Schema
 - [ ] HTML forms
 - [ ] ~~Elm~~

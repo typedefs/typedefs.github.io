@@ -3,7 +3,7 @@ layout: base.njk
 title: Typedefs — References
 ---
 
-There is much prior and ongoing work that is related, here we collect references to related stuff as we come accross it.
+There is much prior and ongoing work that is related. Here we collect references to related stuff as we come accross it.
 
 ### Papers
 
@@ -15,7 +15,7 @@ There is much prior and ongoing work that is related, here we collect references
 6. [Initial Algebra Semantics is Enough!](https://personal.cis.strath.ac.uk/neil.ghani/papers/ghani-tlca07.pdf) — Johann, Ghani
 7. [Polynomial Functors and Polynomial Monads](https://arxiv.org/abs/0906.4931) —  Gambino, Kock
 
-###  Related Stuff
+###  Related Projects
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Interface_description_language): interface Description Language
 - [Wikipedia](https://en.wikipedia.org/wiki/Comparison_of_data_serialization_formats): comparison of data serialization formats
@@ -24,15 +24,15 @@ There is much prior and ongoing work that is related, here we collect references
 - [Argdata](https://github.com/NuxiNL/argdata#binary-encoding): binary encoding
 - [Simple binary encoding](https://mechanical-sympathy.blogspot.nl/2014/05/simple-binary-encoding.html)
 - [Universal Binary Format](http://ubf.github.io/ubf/ubf-user-guide.en.html)
-- [cbor.io](https://cbor.io)
+- [cbor.io](https://cbor.io): Concise Binary Object Representation
 - [Cheerios](https://github.com/uwplse/cheerios): a verified de/serialization lib, part of the [distributedcomponents.net ](http://distributedcomponents.net/) project.
+- [generics-mrsop](https://github.com/VictorCMiraldo/generics-mrsop): Generic programming, with combinators, for mutually recursive families in the 'sums of products' style.
 - [Kaitai struct](https://kaitai.io/): a new way to develop parsers for binary structures.
-- [david-christiansen/b570abb9e7dabfe9074e](https://gist.github.com/david-christiansen/b570abb9e7dabfe9074e): binary parsing, based on Power of Pi
+- [david-christiansen/b570abb9e7dabfe9074e](https://gist.github.com/david-christiansen/b570abb9e7dabfe9074e): binary parsing in Idris, based on Power of Pi
 - [ION](tutorials.jenkov.com/ion/ion-vs-other-formats.html): jenkov.com
 - [scalaz/scalaz-schema](https://github.com/scalaz/scalaz-schema) and [haskell-schema](https://github.com/alonsodomin/haskell-schema)
 - [nuttycom/xenomorph](https://github.com/nuttycom/xenomorph)
 - [higherkindness/skeuomorph](https://github.com/higherkindness/skeuomorph)
 - [Katydid](http://katydid.github.io/): regular expression based. [supported native types](http://katydid.github.io/relapse/types.html)
-- [Tenkei](https://github.com/WhatisRT/tenkei)
-- Mrsop work
+- [Tenkei](https://github.com/WhatisRT/tenkei): Haskell tool for creating arbitrary language bindings
 - [Elm - types without borders](https://github.com/dillonkearns/talks/tree/master/types-without-borders) ~ [talk](https://www.youtube.com/watch?v=memIRXFSNkU)

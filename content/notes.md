@@ -6,7 +6,7 @@ title: Typedefs — Some notes
 
 # Some notes
 
-*TDB*
+*TBD*
 
 <!--
 
@@ -90,8 +90,8 @@ See also ["Protobuffers Are Wrong"](http://reasonablypolymorphic.com/blog/protos
 
 There are various open questions that still need a proper analysis and resolution:
 
-There are questions about isomorphisms: clearly `(1+1)+1` is isomorphic to `1+(1+1)`, but from a datatype point of view we don't want any isomorphisms. We also might want to alias or newtype. There is an interaction with hashing.
-> Fab: I am not sure I get this. An iso is a morphism, and clearly $1+(1+1) \simeq (1+1)+1$, but this doesn't mean that they are equal. It means - and this is very reasonable - that there is a procedure to turn one into the other, and this procedure comes exactly from the associator of the coproduct, seen as a monoidal structure on set. So, in terms of datatypes, it means that I can always translate one datatype to the other, while keeping them different.
+There are questions about isomorphisms: clearly `(1+1)+1` is isomorphic to `1+(1+1)`, but from a data type point of view we don't want any isomorphisms. We also might want to alias or newtype. There is an interaction with hashing.
+> Fab: I am not sure I get this. An iso is a morphism, and clearly $1+(1+1) \simeq (1+1)+1$, but this doesn't mean that they are equal. It means - and this is very reasonable - that there is a procedure to turn one into the other, and this procedure comes exactly from the associator of the coproduct, seen as a monoidal structure on set. So, in terms of data types, it means that I can always translate one data type to the other, while keeping them different.
 > If you add names to your categorical structure these things are even clearer: Specifically, if $F = (-) + (-)$, then I can define $X = F(F(1,1),1)$ and $Y = F(1,F(1,1))$. What category theory tells us is that these two endofunctors are different and hence their initial F-algebras have nothing to do with each other. But, again thanks to the properties of the associator, there is a natural transformation $\alpha: X \implies Y$ which is invertible in each component (i.e. it is a natural isomorphism) and this in turn means that the two initial algebras corresponding to $X,Y$ can be translated one into the other.
 > The point, then, is that we want an hashing procedure that, in categorical terms, commutes with natural isomorphisms. This, from the categorical point of view, it is such a reasonable property to ask (read: If you don't get this your categorical stuff is clearly wrong) that I am quite sure that if we categorify the concept of hashing in the right way we'll get this for free from the structure itself.
  
@@ -164,7 +164,7 @@ So it seems that with products and coproducts we can already do some stuff.
 
 But we also need to have type variables, such as `forall a. maybe a`.
 
-And recusive datatypes, such as `forall a. list a = 1 + (a * list a)`.
+And recusive data types, such as `forall a. list a = 1 + (a * list a)`.
 
 There are several approaches that look like this:
 

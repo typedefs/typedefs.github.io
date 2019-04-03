@@ -7,13 +7,13 @@ title: Typedefs — Background & Motivation
 
 Typedefs is similar to [protocol-buffers](https://developers.google.com/protocol-buffers/), [thrift](https://thrift.apache.org/) and [many more](/related).
 
-However, it is based on a theory of algebraic datatypes and aims to be a more natural fit for users of **proof assistants** and **purely functional, strongly typed** programming languages.
+However, it is based on a theory of algebraic data types and aims to be a more natural fit for users of **proof assistants** and **purely functional, strongly typed** programming languages.
 
 ## Background and motivation
 
-At ([statebox](https://statebox.org)) we need a minimalistic and clean theory of algebraic datatypes (ADTs) that uses structures from [category theory](https://www.math3ma.com/blog/what-is-category-theory-anyway).
+At [Statebox](https://statebox.org), we need a minimalistic and clean theory of algebraic data types (ADTs) that uses structures from [category theory](https://www.math3ma.com/blog/what-is-category-theory-anyway).
 
-Once we find a suitable way to express ADTs, we futhermore want to
+Once we find a suitable way to express ADTs, we futhermore want to:
 
 1. Serialize and deserialize **types** into bytes,
 1. Serialize and deserialize typed **terms** into bytes,

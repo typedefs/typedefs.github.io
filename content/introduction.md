@@ -7,9 +7,9 @@ title: Typedefs — Introduction
 
 See [about](/about) for some background and motivation.
 
-In this introduction we will start with a look at the [type theory](https://en.wikipedia.org/wiki/Type_theory) underlying typedefs and in the next section we will show some examples in the S-expression syntax.
+In this introduction we will start with a look at the [type theory](https://en.wikipedia.org/wiki/Type_theory) underlying Typedefs and in the next section we will show some examples in the S-expression syntax.
 
-## Typesystem
+## Type system
 
 The core theory defines the following rules [`Typedefs.idrs/TDef`](https://github.com/typedefs/typedefs/blob/master/src/Typedefs.idr#L14):
 
@@ -21,13 +21,13 @@ The core theory defines the following rules [`Typedefs.idrs/TDef`](https://githu
 - *a*, *b* variables;
 - `a b` application.
 
-With this you define *algebraic datatypes* (ADTs) such as:
+With this you define *algebraic data types* (ADTs) such as:
 
 - Types with a fixed finite number of terms, such as bits (**2**): `Bool` 
 - Parametric types, such as the optional type: `α → Maybe α`
 - Recursive types, such as homogeneous lists: `α → List α`
 
-(Theoretically, these are seen as *least fixpoints of F-algebras*, we recommend [this blogpost by Bartosz Milewski](https://bartoszmilewski.com/2017/02/28/f-algebras/) to learn about it.)
+(Theoretically, these are *least fixpoints of F-algebras*. We recommend Bartosz Milewski's blogpost on [F-Algebras](https://bartoszmilewski.com/2017/02/28/f-algebras/) to learn about it.)
 
 ### The units
 
@@ -109,17 +109,17 @@ The equation **1 + 1 = 2** expresses nicely that the co-product of two unit type
 Here is an example of such definition of the boolean type.
 
 ```clojure
-;; the "boolean" type as the co-product of two unit-types
+;; the Boolean type as the co-product of two unit-types
 (name Bool (+ 1 1))
 ```
 
-This type is called **closed** because it does not have any free variables (*note*: As stressed above, one way to think of these definitions is as *endofunctors* on typedefs. Closed typedefs are then functors from/to the unit type).
+This type is called **closed** because it does not have any free variables. (Note: as explained below, one way to think of these definitions is as *endofunctors* on typedefs. Closed typedefs are then functors from/to the unit type).
 
 ### Type variables, basic parametric types
 
 It is also possible to define "endofunctors on types", such as the "optional" or "maybe" type.
 
-This type is called *parametric* because it takes a typedef `α` and constructs a new typedef `Maybe α`.
+Such a type is called *parametric* because it takes a typedef `α` and constructs a new typedef `Maybe α`.
 
 Hence, it is a 1-ary functor from typedefs to typedefs.
 
@@ -132,10 +132,10 @@ Here is the definiton:
 (name Maybe (+ 1 (var 0)))
 ```
 
-The number in `(var 0)` is a [De Bruijn indice](https://en.wikipedia.org/wiki/De_Bruijn_index).
+The number in `(var 0)` is a [De Bruijn index](https://en.wikipedia.org/wiki/De_Bruijn_index).
 
 ## **TODO**
 
 That's it for now, more to be written.
 
-If you want to learn more, you can browse the code [here](https://github.com/typedefs).
+If you want to learn more, you can browse the [source code](https://github.com/typedefs) or [Try Typedefs!](https://try.typedefs.com).
