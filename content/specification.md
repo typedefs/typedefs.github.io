@@ -19,7 +19,7 @@ The typedefs language `TDef` can be found in [Typedefs.idr](https://github.com/t
 
 For example expressions in Idris, see [Examples.idr](https://github.com/typedefs/typedefs/blob/master/examples/Examples.idr#L10).
 
-For details on our S-expression (LISP syntax) based frontend, see [Test/Parse.idr](https://github.com/typedefs/typedefs/blob/master/src/Test/Parse.idr#L25).
+For details on our S-expression (LISP syntax) based frontend, see [Test/ParseTests.idr](https://github.com/typedefs/typedefs/blob/master/src/Test/ParseTests.idr#L25).
 
 ## Binary term serialization format
 
