@@ -8,18 +8,23 @@ title: Typedefs — Target language support
 
 # Target support
 
+See [`src/Typedefs/Backend`](https://github.com/typedefs/typedefs/tree/master/src/Typedefs/Backend).
+
 Languages & systems we might want to support or have already implemented:
 
 - [x] Idris
+- [x] Haskell, see `Haskell.idr`
+- [ ] PureScript
+- [x] ReasonML, see `ReasonML.idr`
+- [ ] JavaScript
+- [ ] OCaml
+- [x] JSON Schema, see `JSON.idr`
+
+Possible others:
+
+- [ ] F#
 - [ ] Agda
 - [ ] Coq
-- [x] Haskell, see [`Haskell.idr`](https://github.com/typedefs/typedefs/blob/master/src/Backend/Haskell.idr)
-- [ ] PureScript
-- [x] ReasonML, see [`ReasonML.idr`](https://github.com/typedefs/typedefs/blob/master/src/Backend/ReasonML.idr)
-- [ ] OCaml
-- [ ] F#
-- [x] JSON Schema, see [`JSON.idr`](https://github.com/typedefs/typedefs/blob/master/src/Backend/JSON.idr)
-- [ ] JavaScript
 - [ ] ndjson
 - [ ] SQL
 - [ ] [CQL](http://catinf.com/) (Categorical Query Language, formerly AQL)
@@ -38,4 +43,3 @@ Languages & systems we might want to support or have already implemented:
 - [ ] C#
 - [ ] XML Schema
 - [ ] HTML forms
-- [ ] ~~Elm~~
