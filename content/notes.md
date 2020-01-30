@@ -1,12 +1,134 @@
 ---
 layout: base.njk
-title: Typedefs — Some notes
+title: Typedefs — Feature Previews
 ---
 
 
-# Some notes
+# Feature Preview 2020-01-31
 
-*TBD*
+We are happy to announce a new feature coming up for Typedefs
+along with a preview available on try.typedefs.com:
+Specialised types.
+
+**Disclaimer**: Keep in mind this is a preview and some things
+don't exactly work as expected.
+
+## Specialisation
+
+Specialisation is a feature that will dramatically increase the
+range of uses for Typedefs while keeping the same core language.
+
+### Motivation
+
+Specialisation allows Typedefs to use defintions that are not in
+the current file. For example, imagine writing a typedef for
+transactions:
+
+```clojure
+(name Transaction (* Hash Date Amount))
+```
+
+Typedefs has this limitation that every type has to be defined as a typedef as well.
+
+With that in mind, how do you define `Hash`, `Date` and `Amount`
+as a typedef? You might want `Hash` to be a number, or a string.
+
+For `Date`, do you use `Int` and unix time? What about interfacing
+with the `Date` type of a library?
+
+Even if you use `Int`, how do you implement them as a typedefs?
+You could define them as a product of bits like so:
+
+```clojure
+
+(name Bit (+ 1 1)
+(name Int (* Bit Bit Bit ... Bit))
+           ; \---- 64 bits ----/
+```
+
+That's slightly bizarre, because now we are representing bits as
+a gigantic tuple, which makes it both unwieldy to use in your
+host programming language and very inefficent.
+
+### Specialised Types
+
+Our solution is to introduce references to types that are not
+defined anywhere and pretend they exist, until the very last
+step of the compilation pipeline. We call this mechanism
+"specialisation" because it allows us to use the same name to
+refer to different types that are _specific_ to a certain backend
+or a certain runtime. For example the `Maybe` type might be called
+`Maybe` (In Haskell), `Option` (In OCaml) or `Optional` (In Java)
+depending on the backend. It might not even exist! But though they
+_look_ different they share the same semantics: capturing the
+idea that a value might be absent.
+
+Now we can rewrite our typedef as
+
+```clojure
+(name Amount (mu (MkAmount Int)))
+(name Date (mu (MkDate Date)))
+(name Hash (mu (MkHash String)))
+(name Transaction (* Hash Date Amount))
+```
+
+But there is a slight problem with that: The s-expression syntax
+we use matches our AST very closely. And our AST needs to know
+about the specialised types we're using _before_ we use them.
+For that we declare them in advance with the following syntax:
+
+```clojure
+(specialised Int)
+(specialised String)
+(specialised Date)
+
+; notice we don't need Date anymore since we're using
+; the specialised version of it directly
+(name Amount (mu (MkAmount Int)))
+(name Hash (mu (MkHash String)))
+(name Transaction (* Hash Date Amount))
+```
+
+This way the compiler will look for specialised version of those
+types in the selected backend and insert them in the right places.
+
+### Type Parameters
+
+Specialised types shine when used with type parameters (or
+generics). One such example is the type `Maybe` or `Optional` or `Option`:
+
+```clojure
+(specialised Maybe 1)
+
+(name MyBool (+ 1 1))
+
+(name MyType (mu (MkType (Maybe Bool))))
+```
+
+You will notice a couple things are different in this snippet:
+
+- The specialised type is followed by a number. This number
+represents the _arity_ of the specialised type. In our case
+`Maybe` expects 1 argument so we follow it by the number `1`. If
+we wanted to declare `Either` as a specialised type, we would have
+to write `(specialised Either 2)` because `Either` expects 2
+arguments to be fully applied.
+
+- We can apply a specialised type directly to already defined
+types and the output will be as we expect: a
+serialiser/deserialiser that assumes `encodeMaybe` and
+`decodeMaybe` already exist and uses them in order to
+encode/decode `MyType`.
+
+### The Road Ahead
+
+Specialised types are only the beginning. Not only do they allow
+us to reuse types that are defined differently in different host
+languages, but they also allow us to implement new features such
+as typedefs imports, a standard typedefs repository, reusing
+user-defined encoding/decoding function, reusing user-defined
+types, and more! Stay tuned for what is coming up next.
+
 
 <!--
 
@@ -83,7 +205,7 @@ A data interchange format that can handle typed data, and a set of tools for gen
 Thrift, ProtoBuf, and other such serialisation libraries are made for languages that don't have a 'proper' type theory. For example, many languages lack support for [Algebraic Data Types](https://en.wikipedia.org/wiki/Algebraic_data_type). Typedefs is intended for languages whose type systems *are* nice.
 
 One of the goals of Typedefs is to **mathematically prove the correctness** of serialisation, deserialisation, etc. This gets complex very quickly, so Typedefs is quite minimalistic on purpose.
- 
+
 See also ["Protobuffers Are Wrong"](http://reasonablypolymorphic.com/blog/protos-are-wrong/) by Sandy Maguire, and the associated [Hacker News thread](https://news.ycombinator.com/item?id=18188519).
 
 ## Open questions
@@ -94,7 +216,7 @@ There are questions about isomorphisms: clearly `(1+1)+1` is isomorphic to `1+(1
 > Fab: I am not sure I get this. An iso is a morphism, and clearly $1+(1+1) \simeq (1+1)+1$, but this doesn't mean that they are equal. It means - and this is very reasonable - that there is a procedure to turn one into the other, and this procedure comes exactly from the associator of the coproduct, seen as a monoidal structure on set. So, in terms of data types, it means that I can always translate one data type to the other, while keeping them different.
 > If you add names to your categorical structure these things are even clearer: Specifically, if $F = (-) + (-)$, then I can define $X = F(F(1,1),1)$ and $Y = F(1,F(1,1))$. What category theory tells us is that these two endofunctors are different and hence their initial F-algebras have nothing to do with each other. But, again thanks to the properties of the associator, there is a natural transformation $\alpha: X \implies Y$ which is invertible in each component (i.e. it is a natural isomorphism) and this in turn means that the two initial algebras corresponding to $X,Y$ can be translated one into the other.
 > The point, then, is that we want an hashing procedure that, in categorical terms, commutes with natural isomorphisms. This, from the categorical point of view, it is such a reasonable property to ask (read: If you don't get this your categorical stuff is clearly wrong) that I am quite sure that if we categorify the concept of hashing in the right way we'll get this for free from the structure itself.
- 
+
 ```
 -- this is to demonstrate the questions:
 -- is bit^8 == nibble^2 ?
@@ -160,7 +282,7 @@ We first notice that with the unit type `1` and a coproduct `+`, we can build a 
 
 If we add product (pair) to the mix, we can build a byte: `bit * bit * ... * bit`.
 
-So it seems that with products and coproducts we can already do some stuff. 
+So it seems that with products and coproducts we can already do some stuff.
 
 But we also need to have type variables, such as `forall a. maybe a`.
 
