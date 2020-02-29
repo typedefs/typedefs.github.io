@@ -77,7 +77,7 @@ Specialised types shine when used with type parameters (or generics). One such e
 
 (name MyBool (+ 1 1))
 
-(name MyType (mu (MkType (Maybe Bool))))
+(name MyType (mu (MkType (Maybe MyBool))))
 ```
 
 You will notice a couple things are different in this snippet:
