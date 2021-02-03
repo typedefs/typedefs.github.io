@@ -1,7 +1,7 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 150%;
-    background-color: beige;
+    background-color: rgb(188, 188, 188);
 }
 
 #main {
@@ -9,7 +9,7 @@ body {
 }
 
 a {
-    color: blue;
+    color: darkviolet;
 }
 
 #bodytext {
@@ -37,8 +37,8 @@ nav a {
     padding: 4px;
 }
 nav a:hover {
-    background-color: lightpink;
-    border-bottom: 1px solid violet;
+    background-color: lightgray;
+    border-bottom: 1px solid lightgray;
     margin-bottom: 4px; 
 }
 
@@ -62,7 +62,7 @@ code {
 }
 
 #jumbo-type {
-    color: blue;
+    color: darkviolet;
 }
 
 #jumbo-defs {
@@ -81,7 +81,7 @@ ul input {
     text-decoration: none;
     text-align: center;
     display: inline-block;
-    color: #5f00db;
+    color: darkviolet;
     padding: .4em 1em;
     margin: 8px;
     /* background-color: thistle; */
@@ -127,7 +127,7 @@ ul input {
   }
   
 #try a:hover {
-    background-color: peachpuff;
+    background-color: lightgray;
 }
 
 #try a:after{
@@ -150,7 +150,7 @@ ul input {
       height: 0;
       border-top-color: transparent;
       border-bottom-color: transparent;
-      border-left-color: #ec06ce;
+      border-left-color: darkviolet;
       border-right-color: transparent;
     }
     50%{
